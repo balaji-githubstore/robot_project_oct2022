@@ -1,798 +1,111 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.10.7 on win32)" generated="20221013 11:02:57.995" rpa="false" schemaversion="3">
-<suite id="s1" name="Demo5" source="d:\Mine\Company\Ericsson 5\robot_project\selenium_suite\demo5.robot">
-<test id="s1-t1" name="TC15" line="194">
-<kw name="Open Browser" library="SeleniumLibrary">
-<arg>browser=chrome</arg>
-<arg>executable_path=D:${/}Software${/}chromedriver.exe</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20221013 11:02:58.446" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
-<status status="PASS" starttime="20221013 11:02:58.445" endtime="20221013 11:03:01.087"/>
+<robot generator="Robot 5.0.1 (Python 3.10.7 on win32)" generated="20221013 15:29:26.465" rpa="false" schemaversion="3">
+<suite id="s1" name="Demo1 Windows" source="d:\Mine\Company\Ericsson 5\robot_project\appium_suite\demo1_windows.robot">
+<test id="s1-t1" name="TC3" line="33">
+<kw name="Open Application" library="AppiumLibrary">
+<arg>remote_url=http://localhost:4723/wd/hub</arg>
+<arg>platformName=windows</arg>
+<arg>app=C:\\Users\\Balaji\\AppData\\Roaming\\Zoom\\bin\\Zoom.exe</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<status status="PASS" starttime="20221013 15:29:26.928" endtime="20221013 15:29:33.271"/>
 </kw>
-<kw name="Maximize Browser Window" library="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20221013 11:03:01.099" endtime="20221013 11:03:01.254"/>
+<kw name="Set Appium Timeout" library="AppiumLibrary">
+<arg>10s</arg>
+<doc>Sets the timeout in seconds used by various keywords.</doc>
+<status status="PASS" starttime="20221013 15:29:33.273" endtime="20221013 15:29:33.276"/>
 </kw>
-<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>xpath=//*[@Name='Sign In']</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" starttime="20221013 15:29:33.279" endtime="20221013 15:29:34.205"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>xpath=//*[@Name='Sign In']</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20221013 15:29:34.210" level="INFO">Clicking element 'xpath=//*[@Name='Sign In']'.</msg>
+<status status="PASS" starttime="20221013 15:29:34.207" endtime="20221013 15:29:35.139"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221013 15:29:36.146" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20221013 15:29:35.140" endtime="20221013 15:29:36.146"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>xpath=//*[contains(@Name,'your email')]</arg>
+<arg>hhh@gmail.com</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20221013 15:29:36.152" level="INFO">Typing text 'hhh@gmail.com' into text field 'xpath=//*[contains(@Name,'your email')]'</msg>
+<status status="PASS" starttime="20221013 15:29:36.148" endtime="20221013 15:29:38.729"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221013 15:29:39.740" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20221013 15:29:38.730" endtime="20221013 15:29:39.740"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>xpath=//*[contains(@Name,'your password')]</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20221013 15:29:39.744" level="INFO">Clicking element 'xpath=//*[contains(@Name,'your password')]'.</msg>
+<status status="PASS" starttime="20221013 15:29:39.742" endtime="20221013 15:29:42.064"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>xpath=//*[contains(@Name,'your password')]</arg>
+<arg>welcome123</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20221013 15:29:42.067" level="INFO">Typing text 'welcome123' into text field 'xpath=//*[contains(@Name,'your password')]'</msg>
+<status status="PASS" starttime="20221013 15:29:42.065" endtime="20221013 15:29:44.098"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221013 15:29:45.112" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20221013 15:29:44.099" endtime="20221013 15:29:45.112"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>xpath=//*[@Name='Sign In']</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20221013 15:29:45.124" level="INFO">Clicking element 'xpath=//*[@Name='Sign In']'.</msg>
+<status status="PASS" starttime="20221013 15:29:45.114" endtime="20221013 15:29:47.726"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>xpath=//*[contains(@Name,'Incorrect')]</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" starttime="20221013 15:29:47.737" endtime="20221013 15:29:51.347"/>
+</kw>
+<kw name="Get Element Attribute" library="AppiumLibrary">
+<var>${name}</var>
+<arg>xpath=//*[contains(@Name,'Incorrect')]</arg>
+<arg>Name</arg>
+<doc>Get element attribute using given attribute: name, value,...</doc>
+<msg timestamp="20221013 15:29:53.039" level="INFO">Element 'xpath=//*[contains(@Name,'Incorrect')]' attribute 'Name' value 'Incorrect email or password' </msg>
+<msg timestamp="20221013 15:29:53.040" level="INFO">${name} = Incorrect email or password</msg>
+<status status="PASS" starttime="20221013 15:29:51.349" endtime="20221013 15:29:53.040"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${name}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221013 15:29:53.045" endtime="20221013 15:29:53.046"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
 <arg>5s</arg>
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" starttime="20221013 11:03:01.258" endtime="20221013 11:03:01.268"/>
-</kw>
-<kw name="Go To" library="SeleniumLibrary">
-<arg>url=https://www.google.com</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20221013 11:03:01.270" level="INFO">Opening url 'https://www.google.com'</msg>
-<status status="PASS" starttime="20221013 11:03:01.269" endtime="20221013 11:03:04.896"/>
-</kw>
-<kw name="Get WebElements" library="SeleniumLibrary">
-<var>@{elements}</var>
-<arg>xpath=//a</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<msg timestamp="20221013 11:03:04.935" level="INFO">@{elements} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="09ecb4321d7f0beb8a3dfd5241df8c1c", element="7d85be82-7a03-41b8-8d45-dba9ec3dfcb4")&gt; | &lt;selenium.webdriver.remote.webelement.WebElement (ses...</msg>
-<status status="PASS" starttime="20221013 11:03:04.899" endtime="20221013 11:03:04.936"/>
-</kw>
-<for flavor="IN">
-<var>${element}</var>
-<value>@{elements}</value>
-<iter>
-<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="09ecb4321d7f0beb8a3dfd5241df8c1c", element="7d85be82-7a03-41b8-8d45-dba9ec3dfcb4")&gt;</var>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${text}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20221013 11:03:04.968" level="INFO">${text} = Gmail</msg>
-<status status="PASS" starttime="20221013 11:03:04.939" endtime="20221013 11:03:04.968"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${text}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20221013 11:03:04.969" endtime="20221013 11:03:04.971"/>
-</kw>
-<kw name="Get Element Attribute" library="SeleniumLibrary">
-<var>${href}</var>
-<arg>${element}</arg>
-<arg>href</arg>
-<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<msg timestamp="20221013 11:03:04.984" level="INFO">${href} = https://mail.google.com/mail/&amp;ogbl</msg>
-<status status="PASS" starttime="20221013 11:03:04.971" endtime="20221013 11:03:04.985"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${href}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20221013 11:03:04.985" endtime="20221013 11:03:04.986"/>
-</kw>
-<status status="PASS" starttime="20221013 11:03:04.938" endtime="20221013 11:03:04.986"/>
-</iter>
-<iter>
-<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="09ecb4321d7f0beb8a3dfd5241df8c1c", element="7439cf1e-460b-43f8-b4c4-82c22695e2df")&gt;</var>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${text}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20221013 11:03:05.005" level="INFO">${text} = Images</msg>
-<status status="PASS" starttime="20221013 11:03:04.987" endtime="20221013 11:03:05.005"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${text}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20221013 11:03:05.006" endtime="20221013 11:03:05.010"/>
-</kw>
-<kw name="Get Element Attribute" library="SeleniumLibrary">
-<var>${href}</var>
-<arg>${element}</arg>
-<arg>href</arg>
-<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<msg timestamp="20221013 11:03:05.018" level="INFO">${href} = https://www.google.co.in/imghp?hl=en&amp;ogbl</msg>
-<status status="PASS" starttime="20221013 11:03:05.010" endtime="20221013 11:03:05.019"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${href}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20221013 11:03:05.019" endtime="20221013 11:03:05.020"/>
-</kw>
-<status status="PASS" starttime="20221013 11:03:04.986" endtime="20221013 11:03:05.020"/>
-</iter>
-<iter>
-<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="09ecb4321d7f0beb8a3dfd5241df8c1c", element="53fe43ff-cf4c-43e9-84b4-3c47901cd631")&gt;</var>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${text}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20221013 11:03:05.063" level="INFO">${text} = </msg>
-<status status="PASS" starttime="20221013 11:03:05.021" endtime="20221013 11:03:05.063"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${text}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20221013 11:03:05.064" endtime="20221013 11:03:05.065"/>
-</kw>
-<kw name="Get Element Attribute" library="SeleniumLibrary">
-<var>${href}</var>
-<arg>${element}</arg>
-<arg>href</arg>
-<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<msg timestamp="20221013 11:03:05.084" level="INFO">${href} = https://www.google.co.in/intl/en/about/products</msg>
-<status status="PASS" starttime="20221013 11:03:05.065" endtime="20221013 11:03:05.084"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${href}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20221013 11:03:05.084" endtime="20221013 11:03:05.085"/>
-</kw>
-<status status="PASS" starttime="20221013 11:03:05.020" endtime="20221013 11:03:05.085"/>
-</iter>
-<iter>
-<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="09ecb4321d7f0beb8a3dfd5241df8c1c", element="7270136f-0d7d-41ec-a6a5-773616dd7796")&gt;</var>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${text}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20221013 11:03:05.106" level="INFO">${text} = Sign in</msg>
-<status status="PASS" starttime="20221013 11:03:05.086" endtime="20221013 11:03:05.106"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${text}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20221013 11:03:05.107" endtime="20221013 11:03:05.113"/>
-</kw>
-<kw name="Get Element Attribute" library="SeleniumLibrary">
-<var>${href}</var>
-<arg>${element}</arg>
-<arg>href</arg>
-<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<msg timestamp="20221013 11:03:05.120" level="INFO">${href} = https://accounts.google.com/ServiceLogin?hl=en&amp;passive=true&amp;continue=https://www.google.com/&amp;ec=GAZAmgQ</msg>
-<status status="PASS" starttime="20221013 11:03:05.113" endtime="20221013 11:03:05.120"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${href}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20221013 11:03:05.121" endtime="20221013 11:03:05.122"/>
-</kw>
-<status status="PASS" starttime="20221013 11:03:05.086" endtime="20221013 11:03:05.122"/>
-</iter>
-<iter>
-<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="09ecb4321d7f0beb8a3dfd5241df8c1c", element="907cd42d-a086-42d5-a783-a5bba934ccb2")&gt;</var>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${text}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20221013 11:03:05.139" level="INFO">${text} = </msg>
-<status status="PASS" starttime="20221013 11:03:05.122" endtime="20221013 11:03:05.139"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${text}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20221013 11:03:05.140" endtime="20221013 11:03:05.143"/>
-</kw>
-<kw name="Get Element Attribute" library="SeleniumLibrary">
-<var>${href}</var>
-<arg>${element}</arg>
-<arg>href</arg>
-<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<msg timestamp="20221013 11:03:05.151" level="INFO">${href} = https://www.google.com/#</msg>
-<status status="PASS" starttime="20221013 11:03:05.143" endtime="20221013 11:03:05.151"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${href}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20221013 11:03:05.151" endtime="20221013 11:03:05.152"/>
-</kw>
-<status status="PASS" starttime="20221013 11:03:05.122" endtime="20221013 11:03:05.152"/>
-</iter>
-<iter>
-<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="09ecb4321d7f0beb8a3dfd5241df8c1c", element="341af625-d440-46a2-ad69-70192befaedd")&gt;</var>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${text}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20221013 11:03:05.184" level="INFO">${text} = Google Cloud Next</msg>
-<status status="PASS" starttime="20221013 11:03:05.153" endtime="20221013 11:03:05.184"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${text}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20221013 11:03:05.185" endtime="20221013 11:03:05.186"/>
-</kw>
-<kw name="Get Element Attribute" library="SeleniumLibrary">
-<var>${href}</var>
-<arg>${element}</arg>
-<arg>href</arg>
-<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<msg timestamp="20221013 11:03:05.202" level="INFO">${href} = https://www.google.com/url?q=https://cloud.withgoogle.com/next%3Futm_source%3Dgoogle-homepage%26utm_medium%3Det%26utm_campaign%3DFY22-Q4-global-ENTD217-onlineevent-er-next-2022-mc%26utm_content%3Dgoog...</msg>
-<status status="PASS" starttime="20221013 11:03:05.186" endtime="20221013 11:03:05.202"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${href}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20221013 11:03:05.202" endtime="20221013 11:03:05.204"/>
-</kw>
-<status status="PASS" starttime="20221013 11:03:05.153" endtime="20221013 11:03:05.204"/>
-</iter>
-<iter>
-<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="09ecb4321d7f0beb8a3dfd5241df8c1c", element="aea6472d-813c-4680-8a57-d7bc4cc2d469")&gt;</var>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${text}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20221013 11:03:05.233" level="INFO">${text} = हिन्दी</msg>
-<status status="PASS" starttime="20221013 11:03:05.205" endtime="20221013 11:03:05.233"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${text}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20221013 11:03:05.234" endtime="20221013 11:03:05.234"/>
-</kw>
-<kw name="Get Element Attribute" library="SeleniumLibrary">
-<var>${href}</var>
-<arg>${element}</arg>
-<arg>href</arg>
-<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<msg timestamp="20221013 11:03:05.246" level="INFO">${href} = https://www.google.com/setprefs?sig=0_04jQPySSCUNUG7gjdeE_6C5QTDc%3D&amp;hl=hi&amp;source=homepage&amp;sa=X&amp;ved=0ahUKEwih3PC-vdz6AhVR2jgGHYQxDZMQ2ZgBCBA</msg>
-<status status="PASS" starttime="20221013 11:03:05.235" endtime="20221013 11:03:05.246"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${href}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20221013 11:03:05.246" endtime="20221013 11:03:05.247"/>
-</kw>
-<status status="PASS" starttime="20221013 11:03:05.204" endtime="20221013 11:03:05.248"/>
-</iter>
-<iter>
-<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="09ecb4321d7f0beb8a3dfd5241df8c1c", element="bdccaf81-09b2-4091-90dd-8270ac1e74d4")&gt;</var>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${text}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20221013 11:03:05.279" level="INFO">${text} = বাংলা</msg>
-<status status="PASS" starttime="20221013 11:03:05.248" endtime="20221013 11:03:05.279"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${text}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20221013 11:03:05.279" endtime="20221013 11:03:05.280"/>
-</kw>
-<kw name="Get Element Attribute" library="SeleniumLibrary">
-<var>${href}</var>
-<arg>${element}</arg>
-<arg>href</arg>
-<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<msg timestamp="20221013 11:03:05.287" level="INFO">${href} = https://www.google.com/setprefs?sig=0_04jQPySSCUNUG7gjdeE_6C5QTDc%3D&amp;hl=bn&amp;source=homepage&amp;sa=X&amp;ved=0ahUKEwih3PC-vdz6AhVR2jgGHYQxDZMQ2ZgBCBE</msg>
-<status status="PASS" starttime="20221013 11:03:05.281" endtime="20221013 11:03:05.287"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${href}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20221013 11:03:05.287" endtime="20221013 11:03:05.288"/>
-</kw>
-<status status="PASS" starttime="20221013 11:03:05.248" endtime="20221013 11:03:05.289"/>
-</iter>
-<iter>
-<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="09ecb4321d7f0beb8a3dfd5241df8c1c", element="7fcf5fc6-bdd5-4327-931a-34aab01c27fb")&gt;</var>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${text}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20221013 11:03:05.317" level="INFO">${text} = తెలుగు</msg>
-<status status="PASS" starttime="20221013 11:03:05.293" endtime="20221013 11:03:05.317"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${text}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20221013 11:03:05.317" endtime="20221013 11:03:05.318"/>
-</kw>
-<kw name="Get Element Attribute" library="SeleniumLibrary">
-<var>${href}</var>
-<arg>${element}</arg>
-<arg>href</arg>
-<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<msg timestamp="20221013 11:03:05.331" level="INFO">${href} = https://www.google.com/setprefs?sig=0_04jQPySSCUNUG7gjdeE_6C5QTDc%3D&amp;hl=te&amp;source=homepage&amp;sa=X&amp;ved=0ahUKEwih3PC-vdz6AhVR2jgGHYQxDZMQ2ZgBCBI</msg>
-<status status="PASS" starttime="20221013 11:03:05.319" endtime="20221013 11:03:05.331"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${href}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20221013 11:03:05.332" endtime="20221013 11:03:05.332"/>
-</kw>
-<status status="PASS" starttime="20221013 11:03:05.289" endtime="20221013 11:03:05.333"/>
-</iter>
-<iter>
-<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="09ecb4321d7f0beb8a3dfd5241df8c1c", element="d76f0896-0b23-458c-9352-f1d51e427f59")&gt;</var>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${text}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20221013 11:03:05.352" level="INFO">${text} = मराठी</msg>
-<status status="PASS" starttime="20221013 11:03:05.333" endtime="20221013 11:03:05.353"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${text}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20221013 11:03:05.353" endtime="20221013 11:03:05.354"/>
-</kw>
-<kw name="Get Element Attribute" library="SeleniumLibrary">
-<var>${href}</var>
-<arg>${element}</arg>
-<arg>href</arg>
-<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<msg timestamp="20221013 11:03:05.367" level="INFO">${href} = https://www.google.com/setprefs?sig=0_04jQPySSCUNUG7gjdeE_6C5QTDc%3D&amp;hl=mr&amp;source=homepage&amp;sa=X&amp;ved=0ahUKEwih3PC-vdz6AhVR2jgGHYQxDZMQ2ZgBCBM</msg>
-<status status="PASS" starttime="20221013 11:03:05.354" endtime="20221013 11:03:05.367"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${href}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20221013 11:03:05.367" endtime="20221013 11:03:05.368"/>
-</kw>
-<status status="PASS" starttime="20221013 11:03:05.333" endtime="20221013 11:03:05.368"/>
-</iter>
-<iter>
-<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="09ecb4321d7f0beb8a3dfd5241df8c1c", element="86990a97-ec07-4c2c-8a03-7585eac6ec30")&gt;</var>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${text}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20221013 11:03:05.388" level="INFO">${text} = தமிழ்</msg>
-<status status="PASS" starttime="20221013 11:03:05.369" endtime="20221013 11:03:05.388"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${text}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20221013 11:03:05.389" endtime="20221013 11:03:05.393"/>
-</kw>
-<kw name="Get Element Attribute" library="SeleniumLibrary">
-<var>${href}</var>
-<arg>${element}</arg>
-<arg>href</arg>
-<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<msg timestamp="20221013 11:03:05.401" level="INFO">${href} = https://www.google.com/setprefs?sig=0_04jQPySSCUNUG7gjdeE_6C5QTDc%3D&amp;hl=ta&amp;source=homepage&amp;sa=X&amp;ved=0ahUKEwih3PC-vdz6AhVR2jgGHYQxDZMQ2ZgBCBQ</msg>
-<status status="PASS" starttime="20221013 11:03:05.394" endtime="20221013 11:03:05.402"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${href}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20221013 11:03:05.402" endtime="20221013 11:03:05.403"/>
-</kw>
-<status status="PASS" starttime="20221013 11:03:05.369" endtime="20221013 11:03:05.403"/>
-</iter>
-<iter>
-<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="09ecb4321d7f0beb8a3dfd5241df8c1c", element="d3753437-6c17-42c5-9488-a7bccda5741a")&gt;</var>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${text}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20221013 11:03:05.430" level="INFO">${text} = ગુજરાતી</msg>
-<status status="PASS" starttime="20221013 11:03:05.404" endtime="20221013 11:03:05.430"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${text}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20221013 11:03:05.430" endtime="20221013 11:03:05.431"/>
-</kw>
-<kw name="Get Element Attribute" library="SeleniumLibrary">
-<var>${href}</var>
-<arg>${element}</arg>
-<arg>href</arg>
-<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<msg timestamp="20221013 11:03:05.438" level="INFO">${href} = https://www.google.com/setprefs?sig=0_04jQPySSCUNUG7gjdeE_6C5QTDc%3D&amp;hl=gu&amp;source=homepage&amp;sa=X&amp;ved=0ahUKEwih3PC-vdz6AhVR2jgGHYQxDZMQ2ZgBCBU</msg>
-<status status="PASS" starttime="20221013 11:03:05.432" endtime="20221013 11:03:05.438"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${href}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20221013 11:03:05.438" endtime="20221013 11:03:05.442"/>
-</kw>
-<status status="PASS" starttime="20221013 11:03:05.403" endtime="20221013 11:03:05.443"/>
-</iter>
-<iter>
-<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="09ecb4321d7f0beb8a3dfd5241df8c1c", element="6e8ec0e2-822f-4498-87dc-ed0e9d33bd06")&gt;</var>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${text}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20221013 11:03:05.468" level="INFO">${text} = ಕನ್ನಡ</msg>
-<status status="PASS" starttime="20221013 11:03:05.444" endtime="20221013 11:03:05.468"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${text}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20221013 11:03:05.469" endtime="20221013 11:03:05.469"/>
-</kw>
-<kw name="Get Element Attribute" library="SeleniumLibrary">
-<var>${href}</var>
-<arg>${element}</arg>
-<arg>href</arg>
-<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<msg timestamp="20221013 11:03:05.481" level="INFO">${href} = https://www.google.com/setprefs?sig=0_04jQPySSCUNUG7gjdeE_6C5QTDc%3D&amp;hl=kn&amp;source=homepage&amp;sa=X&amp;ved=0ahUKEwih3PC-vdz6AhVR2jgGHYQxDZMQ2ZgBCBY</msg>
-<status status="PASS" starttime="20221013 11:03:05.470" endtime="20221013 11:03:05.481"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${href}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20221013 11:03:05.481" endtime="20221013 11:03:05.483"/>
-</kw>
-<status status="PASS" starttime="20221013 11:03:05.443" endtime="20221013 11:03:05.483"/>
-</iter>
-<iter>
-<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="09ecb4321d7f0beb8a3dfd5241df8c1c", element="2ff1b998-0395-4d11-a6e4-06aab385db59")&gt;</var>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${text}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20221013 11:03:05.501" level="INFO">${text} = മലയാളം</msg>
-<status status="PASS" starttime="20221013 11:03:05.484" endtime="20221013 11:03:05.501"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${text}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20221013 11:03:05.502" endtime="20221013 11:03:05.503"/>
-</kw>
-<kw name="Get Element Attribute" library="SeleniumLibrary">
-<var>${href}</var>
-<arg>${element}</arg>
-<arg>href</arg>
-<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<msg timestamp="20221013 11:03:05.516" level="INFO">${href} = https://www.google.com/setprefs?sig=0_04jQPySSCUNUG7gjdeE_6C5QTDc%3D&amp;hl=ml&amp;source=homepage&amp;sa=X&amp;ved=0ahUKEwih3PC-vdz6AhVR2jgGHYQxDZMQ2ZgBCBc</msg>
-<status status="PASS" starttime="20221013 11:03:05.503" endtime="20221013 11:03:05.516"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${href}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20221013 11:03:05.516" endtime="20221013 11:03:05.517"/>
-</kw>
-<status status="PASS" starttime="20221013 11:03:05.483" endtime="20221013 11:03:05.517"/>
-</iter>
-<iter>
-<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="09ecb4321d7f0beb8a3dfd5241df8c1c", element="4ebcfcb1-38de-4e61-8224-41c04200076b")&gt;</var>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${text}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20221013 11:03:05.536" level="INFO">${text} = ਪੰਜਾਬੀ</msg>
-<status status="PASS" starttime="20221013 11:03:05.518" endtime="20221013 11:03:05.536"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${text}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20221013 11:03:05.536" endtime="20221013 11:03:05.537"/>
-</kw>
-<kw name="Get Element Attribute" library="SeleniumLibrary">
-<var>${href}</var>
-<arg>${element}</arg>
-<arg>href</arg>
-<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<msg timestamp="20221013 11:03:05.549" level="INFO">${href} = https://www.google.com/setprefs?sig=0_04jQPySSCUNUG7gjdeE_6C5QTDc%3D&amp;hl=pa&amp;source=homepage&amp;sa=X&amp;ved=0ahUKEwih3PC-vdz6AhVR2jgGHYQxDZMQ2ZgBCBg</msg>
-<status status="PASS" starttime="20221013 11:03:05.538" endtime="20221013 11:03:05.549"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${href}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20221013 11:03:05.550" endtime="20221013 11:03:05.551"/>
-</kw>
-<status status="PASS" starttime="20221013 11:03:05.518" endtime="20221013 11:03:05.551"/>
-</iter>
-<iter>
-<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="09ecb4321d7f0beb8a3dfd5241df8c1c", element="9786af0d-72d3-4bb6-b2f7-98b188d3af88")&gt;</var>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${text}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20221013 11:03:05.571" level="INFO">${text} = About</msg>
-<status status="PASS" starttime="20221013 11:03:05.552" endtime="20221013 11:03:05.571"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${text}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20221013 11:03:05.572" endtime="20221013 11:03:05.572"/>
-</kw>
-<kw name="Get Element Attribute" library="SeleniumLibrary">
-<var>${href}</var>
-<arg>${element}</arg>
-<arg>href</arg>
-<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<msg timestamp="20221013 11:03:05.582" level="INFO">${href} = https://about.google/?utm_source=google-IN&amp;utm_medium=referral&amp;utm_campaign=hp-footer&amp;fg=1</msg>
-<status status="PASS" starttime="20221013 11:03:05.573" endtime="20221013 11:03:05.583"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${href}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20221013 11:03:05.583" endtime="20221013 11:03:05.584"/>
-</kw>
-<status status="PASS" starttime="20221013 11:03:05.552" endtime="20221013 11:03:05.584"/>
-</iter>
-<iter>
-<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="09ecb4321d7f0beb8a3dfd5241df8c1c", element="2ee62102-8529-44a0-849a-18be06be077c")&gt;</var>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${text}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20221013 11:03:05.602" level="INFO">${text} = Advertising</msg>
-<status status="PASS" starttime="20221013 11:03:05.585" endtime="20221013 11:03:05.602"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${text}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20221013 11:03:05.602" endtime="20221013 11:03:05.603"/>
-</kw>
-<kw name="Get Element Attribute" library="SeleniumLibrary">
-<var>${href}</var>
-<arg>${element}</arg>
-<arg>href</arg>
-<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<msg timestamp="20221013 11:03:05.616" level="INFO">${href} = https://www.google.com/intl/en_in/ads/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&amp;utm_source=google.com&amp;utm_medium=referral&amp;utm_campaign=google_hpafooter&amp;fg=1</msg>
-<status status="PASS" starttime="20221013 11:03:05.604" endtime="20221013 11:03:05.616"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${href}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20221013 11:03:05.616" endtime="20221013 11:03:05.617"/>
-</kw>
-<status status="PASS" starttime="20221013 11:03:05.584" endtime="20221013 11:03:05.617"/>
-</iter>
-<iter>
-<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="09ecb4321d7f0beb8a3dfd5241df8c1c", element="76bb8185-f771-4dc2-86af-5000f1445f84")&gt;</var>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${text}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20221013 11:03:05.636" level="INFO">${text} = Business</msg>
-<status status="PASS" starttime="20221013 11:03:05.618" endtime="20221013 11:03:05.636"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${text}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20221013 11:03:05.636" endtime="20221013 11:03:05.637"/>
-</kw>
-<kw name="Get Element Attribute" library="SeleniumLibrary">
-<var>${href}</var>
-<arg>${element}</arg>
-<arg>href</arg>
-<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<msg timestamp="20221013 11:03:05.648" level="INFO">${href} = https://www.google.com/services/?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o2&amp;utm_source=google.com&amp;utm_medium=referral&amp;utm_campaign=google_hpbfooter&amp;fg=1</msg>
-<status status="PASS" starttime="20221013 11:03:05.638" endtime="20221013 11:03:05.648"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${href}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20221013 11:03:05.649" endtime="20221013 11:03:05.650"/>
-</kw>
-<status status="PASS" starttime="20221013 11:03:05.618" endtime="20221013 11:03:05.650"/>
-</iter>
-<iter>
-<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="09ecb4321d7f0beb8a3dfd5241df8c1c", element="6355f7f9-a3de-4acf-8fb7-2ddb79b9dcaa")&gt;</var>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${text}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20221013 11:03:05.676" level="INFO">${text} = How Search works</msg>
-<status status="PASS" starttime="20221013 11:03:05.651" endtime="20221013 11:03:05.676"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${text}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20221013 11:03:05.677" endtime="20221013 11:03:05.677"/>
-</kw>
-<kw name="Get Element Attribute" library="SeleniumLibrary">
-<var>${href}</var>
-<arg>${element}</arg>
-<arg>href</arg>
-<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<msg timestamp="20221013 11:03:05.686" level="INFO">${href} = https://google.com/search/howsearchworks/?fg=1</msg>
-<status status="PASS" starttime="20221013 11:03:05.678" endtime="20221013 11:03:05.721"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${href}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20221013 11:03:05.721" endtime="20221013 11:03:05.722"/>
-</kw>
-<status status="PASS" starttime="20221013 11:03:05.651" endtime="20221013 11:03:05.722"/>
-</iter>
-<iter>
-<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="09ecb4321d7f0beb8a3dfd5241df8c1c", element="5d64ad94-e09e-40c0-a9ad-ea76805b3029")&gt;</var>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${text}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20221013 11:03:05.743" level="INFO">${text} = Privacy</msg>
-<status status="PASS" starttime="20221013 11:03:05.726" endtime="20221013 11:03:05.744"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${text}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20221013 11:03:05.744" endtime="20221013 11:03:05.745"/>
-</kw>
-<kw name="Get Element Attribute" library="SeleniumLibrary">
-<var>${href}</var>
-<arg>${element}</arg>
-<arg>href</arg>
-<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<msg timestamp="20221013 11:03:05.753" level="INFO">${href} = https://policies.google.com/privacy?hl=en-IN&amp;fg=1</msg>
-<status status="PASS" starttime="20221013 11:03:05.746" endtime="20221013 11:03:05.753"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${href}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20221013 11:03:05.754" endtime="20221013 11:03:05.755"/>
-</kw>
-<status status="PASS" starttime="20221013 11:03:05.722" endtime="20221013 11:03:05.755"/>
-</iter>
-<iter>
-<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="09ecb4321d7f0beb8a3dfd5241df8c1c", element="0067e8b7-cc91-4c55-9996-42b2dd4fd8de")&gt;</var>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${text}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20221013 11:03:05.777" level="INFO">${text} = Terms</msg>
-<status status="PASS" starttime="20221013 11:03:05.755" endtime="20221013 11:03:05.777"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${text}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20221013 11:03:05.778" endtime="20221013 11:03:05.779"/>
-</kw>
-<kw name="Get Element Attribute" library="SeleniumLibrary">
-<var>${href}</var>
-<arg>${element}</arg>
-<arg>href</arg>
-<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<msg timestamp="20221013 11:03:05.786" level="INFO">${href} = https://policies.google.com/terms?hl=en-IN&amp;fg=1</msg>
-<status status="PASS" starttime="20221013 11:03:05.779" endtime="20221013 11:03:05.786"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${href}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20221013 11:03:05.786" endtime="20221013 11:03:05.787"/>
-</kw>
-<status status="PASS" starttime="20221013 11:03:05.755" endtime="20221013 11:03:05.787"/>
-</iter>
-<iter>
-<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="09ecb4321d7f0beb8a3dfd5241df8c1c", element="333455e1-9f4c-492d-9cbc-d66d43fce9ba")&gt;</var>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${text}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20221013 11:03:05.810" level="INFO">${text} = </msg>
-<status status="PASS" starttime="20221013 11:03:05.788" endtime="20221013 11:03:05.811"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${text}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20221013 11:03:05.812" endtime="20221013 11:03:05.813"/>
-</kw>
-<kw name="Get Element Attribute" library="SeleniumLibrary">
-<var>${href}</var>
-<arg>${element}</arg>
-<arg>href</arg>
-<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<msg timestamp="20221013 11:03:05.820" level="INFO">${href} = https://www.google.com/preferences?hl=en-IN&amp;fg=1</msg>
-<status status="PASS" starttime="20221013 11:03:05.813" endtime="20221013 11:03:05.821"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${href}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20221013 11:03:05.821" endtime="20221013 11:03:05.822"/>
-</kw>
-<status status="PASS" starttime="20221013 11:03:05.787" endtime="20221013 11:03:05.822"/>
-</iter>
-<iter>
-<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="09ecb4321d7f0beb8a3dfd5241df8c1c", element="c1cf80d3-477c-4608-9d3e-3fab546dc2a2")&gt;</var>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${text}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20221013 11:03:05.844" level="INFO">${text} = </msg>
-<status status="PASS" starttime="20221013 11:03:05.826" endtime="20221013 11:03:05.844"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${text}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20221013 11:03:05.845" endtime="20221013 11:03:05.845"/>
-</kw>
-<kw name="Get Element Attribute" library="SeleniumLibrary">
-<var>${href}</var>
-<arg>${element}</arg>
-<arg>href</arg>
-<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<msg timestamp="20221013 11:03:05.854" level="INFO">${href} = https://www.google.com/advanced_search?hl=en-IN&amp;fg=1</msg>
-<status status="PASS" starttime="20221013 11:03:05.846" endtime="20221013 11:03:05.854"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${href}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20221013 11:03:05.854" endtime="20221013 11:03:05.855"/>
-</kw>
-<status status="PASS" starttime="20221013 11:03:05.823" endtime="20221013 11:03:05.855"/>
-</iter>
-<iter>
-<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="09ecb4321d7f0beb8a3dfd5241df8c1c", element="a67ad643-35bd-479e-9a47-9ab0b8c42218")&gt;</var>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${text}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20221013 11:03:05.879" level="INFO">${text} = </msg>
-<status status="PASS" starttime="20221013 11:03:05.856" endtime="20221013 11:03:05.879"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${text}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20221013 11:03:05.879" endtime="20221013 11:03:05.880"/>
-</kw>
-<kw name="Get Element Attribute" library="SeleniumLibrary">
-<var>${href}</var>
-<arg>${element}</arg>
-<arg>href</arg>
-<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<msg timestamp="20221013 11:03:05.888" level="INFO">${href} = https://www.google.com/history/privacyadvisor/search/unauth?utm_source=googlemenu&amp;fg=1&amp;cctld=com</msg>
-<status status="PASS" starttime="20221013 11:03:05.880" endtime="20221013 11:03:05.888"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${href}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20221013 11:03:05.888" endtime="20221013 11:03:05.889"/>
-</kw>
-<status status="PASS" starttime="20221013 11:03:05.856" endtime="20221013 11:03:05.889"/>
-</iter>
-<iter>
-<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="09ecb4321d7f0beb8a3dfd5241df8c1c", element="49e1649d-3e27-41d4-b764-8873b71a7884")&gt;</var>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${text}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20221013 11:03:05.911" level="INFO">${text} = </msg>
-<status status="PASS" starttime="20221013 11:03:05.893" endtime="20221013 11:03:05.912"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${text}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20221013 11:03:05.912" endtime="20221013 11:03:05.913"/>
-</kw>
-<kw name="Get Element Attribute" library="SeleniumLibrary">
-<var>${href}</var>
-<arg>${element}</arg>
-<arg>href</arg>
-<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<msg timestamp="20221013 11:03:05.920" level="INFO">${href} = https://www.google.com/history/optout?hl=en-IN&amp;fg=1</msg>
-<status status="PASS" starttime="20221013 11:03:05.913" endtime="20221013 11:03:05.920"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${href}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20221013 11:03:05.920" endtime="20221013 11:03:05.922"/>
-</kw>
-<status status="PASS" starttime="20221013 11:03:05.892" endtime="20221013 11:03:05.922"/>
-</iter>
-<iter>
-<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="09ecb4321d7f0beb8a3dfd5241df8c1c", element="0cf64f5f-e05c-4ed8-ae0b-2fee565195a7")&gt;</var>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${text}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20221013 11:03:05.944" level="INFO">${text} = </msg>
-<status status="PASS" starttime="20221013 11:03:05.923" endtime="20221013 11:03:05.945"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${text}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20221013 11:03:05.945" endtime="20221013 11:03:05.945"/>
-</kw>
-<kw name="Get Element Attribute" library="SeleniumLibrary">
-<var>${href}</var>
-<arg>${element}</arg>
-<arg>href</arg>
-<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<msg timestamp="20221013 11:03:05.953" level="INFO">${href} = https://support.google.com/websearch/?p=ws_results_help&amp;hl=en-IN&amp;fg=1</msg>
-<status status="PASS" starttime="20221013 11:03:05.947" endtime="20221013 11:03:05.954"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${href}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20221013 11:03:05.954" endtime="20221013 11:03:05.955"/>
-</kw>
-<status status="PASS" starttime="20221013 11:03:05.922" endtime="20221013 11:03:05.955"/>
-</iter>
-<status status="PASS" starttime="20221013 11:03:04.937" endtime="20221013 11:03:05.955"/>
-</for>
-<status status="PASS" starttime="20221013 11:02:58.444" endtime="20221013 11:03:05.956"/>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221013 15:29:58.067" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20221013 15:29:53.047" endtime="20221013 15:29:58.071"/>
+</kw>
+<kw name="Close Application" library="AppiumLibrary" type="TEARDOWN">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" starttime="20221013 15:29:58.074" endtime="20221013 15:29:58.377"/>
+</kw>
+<status status="PASS" starttime="20221013 15:29:26.926" endtime="20221013 15:29:58.385"/>
 </test>
-<status status="PASS" starttime="20221013 11:02:58.051" endtime="20221013 11:03:05.961"/>
+<status status="PASS" starttime="20221013 15:29:26.473" endtime="20221013 15:29:58.417"/>
 </suite>
 <statistics>
 <total>
@@ -801,7 +114,7 @@
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Demo5">Demo5</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Demo1 Windows">Demo1 Windows</stat>
 </suite>
 </statistics>
 <errors>
