@@ -35,7 +35,15 @@ TC2
     [Teardown]    Close Browser
  
 
+TC3
+    Open Browser
+    ...    url=https://www.facebook.com/
+    ...    browser=chrome
+    ...    executable_path=D:${/}Software${/}chromedriver.exe
 
+    Input Text    css=#email    bala123456@gmail.com
+    Input Password    css=#pass    welcome123
+    Click Element    css=[name='login']
 
 
 *** Comments ***
